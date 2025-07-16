@@ -1,34 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Bell, CheckCheck, Info, TriangleAlert, Ban } from 'lucide-react';
+import Alert from "./components/ui/Alert"
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  return(
+    <div style={{ margin: "2rem" }}>
+      <Alert type={"alert-default"} icon={<Bell size={20} />} 
+      title={"Default Alert"} 
+      description={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ipsum corporis sapiente quasi officia, molestias praesentium quaerat. Quae, vero possimus? Nesciunt officiis culpa delectus distinctio doloribus eligendi eius corrupti voluptatibus."}
+      />
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      <Alert type={"alert-info"} icon={<Info size={20} />} 
+      title={"Info Alert"} 
+      description={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ipsum corporis sapiente quasi officia, molestias praesentium quaerat. Quae, vero possimus? Nesciunt officiis culpa delectus distinctio doloribus eligendi eius corrupti voluptatibus."}
+      />
+
+      <Alert type={"alert-success"} icon={<CheckCheck size={20} />} 
+      title={"Success Alert"} 
+      description={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ipsum corporis sapiente quasi officia, molestias praesentium quaerat. Quae, vero possimus? Nesciunt officiis culpa delectus distinctio doloribus eligendi eius corrupti voluptatibus."}
+      />
+
+      <Alert type={"alert-warning"} icon={<TriangleAlert size={20} />} 
+      title={"Warning Alert"} 
+      description={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ipsum corporis sapiente quasi officia, molestias praesentium quaerat. Quae, vero possimus? Nesciunt officiis culpa delectus distinctio doloribus eligendi eius corrupti voluptatibus."}
+      />
+
+      <Alert type={"alert-error"} icon={<Ban size={20} />} 
+      title={"Error Alert"} 
+      description={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ipsum corporis sapiente quasi officia, molestias praesentium quaerat. Quae, vero possimus? Nesciunt officiis culpa delectus distinctio doloribus eligendi eius corrupti voluptatibus."}
+      />
+    </div>
   )
 }
 
